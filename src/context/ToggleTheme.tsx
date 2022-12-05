@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components/native';
 
 import { DARK } from '@theme/dark';
@@ -38,7 +39,14 @@ export function ToggleThemeProvider({ children }: Props) {
 
   return (
     <ToggleThemeContext.Provider value={{ theme, toggleTheme }}>
-      <ThemeProvider theme={themes[theme]}>{children}</ThemeProvider>
+      <ThemeProvider theme={themes[theme]}>
+        <StatusBar
+          backgroundColor="transparent"
+          translucent
+          barStyle={theme === 'light' ? 'dark-content' : 'light-content'}
+        />
+        {children}
+      </ThemeProvider>
     </ToggleThemeContext.Provider>
   );
 }

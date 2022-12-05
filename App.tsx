@@ -4,6 +4,8 @@ import {
   NunitoSans_700Bold,
 } from '@expo-google-fonts/nunito-sans';
 
+import { Loading } from '@components/Loading';
+
 import { ToggleThemeProvider } from '@context/ToggleTheme';
 
 import { Home } from '@screens/Home';
@@ -14,13 +16,9 @@ export default function App() {
     NunitoSans_700Bold,
   });
 
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <ToggleThemeProvider>
-      <Home />
+      {!fontsLoaded ? <Loading /> : <Home />}
     </ToggleThemeProvider>
   );
 }
