@@ -8,3 +8,23 @@ export const Container = styled.View`
   padding-left: 24px;
   padding-right: 24px;
 `;
+
+export const HighlightCard = styled.View`
+  height: 120px;
+  background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-top: 12px;
+`;
+
+export const HighlightCardTitle = styled.Text`
+  font-size: 32px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+`;
+
+export const HighlightCardDescription = styled.Text`
+  font-size: 14px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
+  margin-top: 8px;
+`;
