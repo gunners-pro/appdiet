@@ -1,3 +1,4 @@
+import { Button } from '@components/Button';
 import { Header } from '@components/Header';
 
 import {
@@ -5,6 +6,7 @@ import {
   HighlightCard,
   HighlightCardTitle,
   HighlightCardDescription,
+  Meal,
 } from './styles';
 
 export function Home() {
@@ -17,6 +19,8 @@ export function Home() {
           das refeições dentro da dieta
         </HighlightCardDescription>
       </HighlightCard>
+      <Meal>Refeições</Meal>
+      <Button text="Nova refeição" showIcon />
     </Container>
   );
 }

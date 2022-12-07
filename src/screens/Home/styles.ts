@@ -15,7 +15,7 @@ export const HighlightCard = styled.View`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  margin-top: 12px;
+  margin: 0 0 36px;
 `;
 
 export const HighlightCardTitle = styled.Text`
@@ -27,4 +27,11 @@ export const HighlightCardDescription = styled.Text`
   font-size: 14px;
   font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
   margin-top: 8px;
+`;
+
+export const Meal = styled.Text`
+  font-size: 16px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.REGULAR};
+  color: ${({ theme }) => theme.COLORS.GRAY_700};
+  margin: 0 0 12px;
 `;
