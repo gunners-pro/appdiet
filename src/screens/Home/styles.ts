@@ -35,3 +35,11 @@ export const Meal = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_700};
   margin: 0 0 12px;
 `;
+
+export const SectionHeader = styled.Text`
+  font-size: 20px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.BOLD};
+  color: ${({ theme }) => theme.COLORS.GRAY_700};
+  margin-top: 24px;
+  margin-bottom: 10px;
+`;
