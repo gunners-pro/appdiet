@@ -1,3 +1,4 @@
+import { ArrowUpRight } from 'phosphor-react-native';
 import { StatusBar } from 'react-native';
 import styled from 'styled-components/native';
 
@@ -16,6 +17,17 @@ export const HighlightCard = styled.View`
   justify-content: center;
   border-radius: 10px;
   margin: 0 0 36px;
+  position: relative;
+`;
+
+export const HighlightIcon = styled(ArrowUpRight).attrs({
+  size: 30,
+  color: '#639339',
+  weight: 'bold',
+})`
+  position: absolute;
+  right: 8px;
+  top: 8px;
 `;
 
 export const HighlightCardTitle = styled.Text`
@@ -42,4 +54,21 @@ export const SectionHeader = styled.Text`
   color: ${({ theme }) => theme.COLORS.GRAY_700};
   margin-top: 24px;
   margin-bottom: 10px;
+`;
+
+export const FoodListItem = styled.View`
+  flex-direction: row;
+  border-width: 1px;
+  border-color: ${({ theme }) => theme.COLORS.GRAY_500};
+  border-radius: 8px;
+  padding: 16px 12px;
+  margin-bottom: 8px;
+`;
+
+export const FoodListItemTime = styled.Text`
+  color: ${({ theme }) => theme.COLORS.GRAY_500};
+`;
+
+export const FoodListItemText = styled.Text`
+  color: ${({ theme }) => theme.COLORS.GRAY_500};
 `;
