@@ -9,6 +9,7 @@ import { Loading } from '@components/Loading';
 import { ToggleThemeProvider } from '@context/ToggleTheme';
 
 import { Home } from '@screens/Home';
+import { Register } from '@screens/Register';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,7 +19,7 @@ export default function App() {
 
   return (
     <ToggleThemeProvider>
-      {!fontsLoaded ? <Loading /> : <Home />}
+      {!fontsLoaded ? <Loading /> : <Register />}
     </ToggleThemeProvider>
   );
 }
