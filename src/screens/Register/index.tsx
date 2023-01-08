@@ -1,6 +1,15 @@
 import { ArrowLeft } from 'phosphor-react-native';
 
-import { Container, Header, Title, Block, Form } from './styles';
+import {
+  Container,
+  Header,
+  Title,
+  Block,
+  Form,
+  InputLabel,
+  InputName,
+  InputDescription,
+} from './styles';
 
 export function Register() {
   return (
@@ -10,7 +19,17 @@ export function Register() {
         <Title>Nova refeição</Title>
         <Block />
       </Header>
-      <Form></Form>
+      <Form>
+        <InputLabel>Nome</InputLabel>
+        <InputName />
+        <InputLabel>Descrição</InputLabel>
+        <InputDescription
+          numberOfLines={5}
+          multiline
+          maxLength={214}
+          style={{ textAlignVertical: 'top' }}
+        />
+      </Form>
     </Container>
   );
 }
